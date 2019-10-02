@@ -28,17 +28,20 @@ Glossaire
 ==========
 
 .. _`expression`: 
-    
+
+**Expression**:
 Une partie d'un code d'une langue de niveau supérieur, qui produit une valeur
 lors que son exécution a terminé.
 
 .. _`langue de niveau supérieur`: 
 
+**Langue de niveau supérieur**:
 Un langage de programmation qui donne des abstractions sur le programme
 d'assemblée.
 
 .. _`fonction`:
 
+**Fonction**:
 Une correspondance. Si D et C sont des ensembles (domain et co-domain), une
 fonction f est, écrit comme :math:`f: D → C`, un sous ensemble d'ensemble
 :math:`{(d,c) | d ∈ D, c ∈ C}`. C'est ensemble est nommé l'ensemble de
@@ -56,15 +59,18 @@ correspondance entre un `domain`_ et `codomain`_.
 
 .. _`domain`:
 
+**Domain**:
 L'ensemble dont les membres sont des valeurs auxquelles la fonction est
 défini.
 
 .. _`codomain`:
 
+**Codomain**:
 L'ensemble dont les membres sont des valeurs possibles pour le résultat d'une
 fonction.
 
-.. _`range`: range
+.. _`range`:
 
+**Range**:
 L'ensemble dont les membres sont des valeurs qui sortent comme résultat d'une
 fonction.
