@@ -64,7 +64,7 @@ défini.
 L'ensemble dont les membres sont des valeurs possibles pour le résultat d'une
 fonction.
 
-.. _`range`:
+.. _`range`: range
 
 L'ensemble dont les membres sont des valeurs qui sortent comme résultat d'une
 fonction.
