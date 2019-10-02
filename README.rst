@@ -40,8 +40,8 @@ suivantes pour créer un espace de travail sécurisé, et complete.
 On donnera des instructions supplémentaire pour :code:`conda`, mais si vous
 utilisez un autre programme pour isoler votre environnement de travail vous
 êtes libre de l'utiliser.  Si vous avez décider d'utiliser :code:`conda` mais
-ne savez pas comment le faire `voici
-<https://github.com/Humanites-Numeriques-PSL/gerer-conda-env>` des
+ne savez pas comment le faire 
+`voici <https://github.com/Humanites-Numeriques-PSL/gerer-conda-env>`_ des
 instructions de base à savoir pour gérer des environnements de travail avec
 :code:`conda`.
 
