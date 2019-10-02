@@ -8,10 +8,10 @@ Ceci est une introduction au python par des petits applications illustrant des
 points nécessaire pour être autonome avec la langue. Aucun prérequis est
 nécessaire à part d'une version de Python 3 et un éditeur de texte (notepad++,
 vim, emacs, atom, etc mais pas de word, open office). Au total on fait 7
-applications. La dernière application est un résultat qui regroupe toutes nos
-connaissances. Comme c'est une application complète au but éducatif qui soit
-exemplaire pour les autres applications que vous pouvez écrire, son dépôt est
-séparé. Il se trouve `ici <https://github.com/D-K-E/python-12-jours-appli>`_.
+applications. La dernière application regroupe toutes nos connaissances. Comme
+c'est une application complète au but éducatif qui soit exemplaire pour les
+autres applications que vous pouvez écrire, son dépôt est séparé. Il se trouve
+`ici <https://github.com/D-K-E/python-12-jours-appli>`_.
 
 
 La structure de programme est assez simple. On code ensemble une application
@@ -26,8 +26,8 @@ Prérequis
 ==========
 
 Aucun prérequis est nécessaire à part d'une version de Python 3 et un éditeur
-de texte de votre choix. Quand même je vous invite de procurer la liste
-suivante des outils pour créer un espace de travail sécurisé, et complete.
+de texte de votre choix. Quand même je vous invite à procurer les outils 
+suivantes pour créer un espace de travail sécurisé, et complete.
 
 - Un gestionnaire d'environnement de la liste suivante:
 
@@ -54,6 +54,17 @@ d'`ici <https://www.python.org/downloads/>`_.
 
 Pour les utilisateurs de windows, je vous conseil fortement d'utiliser une
 `machine virtuelle <https://www.virtualbox.org/wiki/Downloads>`_ avec une
-distribution de GNU/Linux, comme `ubuntu <https://ubuntu.com/download>`_,
-dedans pour suivre ce qu'on fait. Vous pouvez ensuite tester ou porter vos
-applications dans votre propre système.
+distribution de GNU/Linux, comme `ubuntu <https://ubuntu.com/download>`_. Pour
+installer Ubuntu à votre machine virtuelle veuillez suivre les indications
+d'`ici <https://fr.wikihow.com/installer-Ubuntu-sur-VirtualBox>`_ pour suivre
+ce qu'on fait. Vous pouvez ensuite tester ou porter vos applications dans
+votre propre système.
+
+Comment procéder ?
+===================
+
+Les applications sont progressives, donc je vous conseille de commencer à
+partir de 0. La section sur la théorie de base est optionnelle mais souhaitable
+si vous voulez savoir comment Python se situe parmi un palette des langues
+programmations. Elle va vous permettre de familiariser avec le jargon et va
+vous faciliter la compréhension de ce qui se passe de façon générale.
