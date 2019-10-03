@@ -39,10 +39,6 @@ fonctions. Ces changements d'état dans le programme qui se passent lors de l'ex
 de programme s'appel des effets de bords, ou des effets sécondaires (side effects).
 
 
-Computation et Langues de Programmation
-==========================================
-
-
 Elements d'une Fonction
 -------------------------
 
@@ -96,6 +92,39 @@ Chaque langue a des expréssions. Par exemple:
     (
         def c  (+ b 4)
     )
+
+
+
+
+Computation et Langues de Programmation
+==========================================
+
+
+3 Dicathomies Pratiques des langues de programmation
+-----------------------------------------------------
+
+La première dicathomie est lié à les privilèges des certains expréssions,
+et homoïconicité des expréssions.
+
+.. image:: ax1.png
+
+
+La deuxième dicathomie est lié au temps de dévéloppement et au temps d'exécution
+des programmes
+
+.. image:: ax2.png
+
+
+La troisième dicathomie est lié à l'utilité et la pureté de la langue de
+programmation
+
+.. image:: ax3.png
+
+
+Erreurs
+--------
+
+Ils sont inévitables. Il faut trouver des façons pour combattre contre eux.
 
 
 Type
