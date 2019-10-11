@@ -1,0 +1,6 @@
+############
+Exercice 04
+############
+
+Veuillez afficher un :code:`E` en majuscule constitué par le signe :code:`*`
+dans le terminal dont les traits horizontals ont le longueur 5 :code:`*`.

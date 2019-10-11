@@ -1,0 +1,11 @@
+############
+Exercice 06
+############
+
+Écrivez une fonction qui peut calculer la somme des membres de type de nombre
+flottant ou entier pour la liste suivante: 
+:code:`mylist = [1,53, 1.3, 4.8, "a", 42j, "oro", ["a", "r"], {"p": 'oo'}]`
+
+Astuce: Veuillez voir la `page
+<https://docs.python.org//3/library/functions.html#isinstance>`_ de
+:code:`isinstance` dans le manuel.

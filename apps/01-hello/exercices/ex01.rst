@@ -1,0 +1,6 @@
+############
+Exercice 01
+############
+
+Écrivez un programme qui s'affiche "Hello World" avec un point d'entrée.
+

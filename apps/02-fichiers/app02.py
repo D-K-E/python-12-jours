@@ -190,3 +190,9 @@ if __name__ == "__main__":
     with open("stopwordsGr.txt", "r", encoding="utf-8", newline="\n") as fd:
         stopwordsgr = fd.readlines()
         stopwordsgr = stopwordsgr[2:]
+    print("voici les stopwords du latin")
+    print(stopwordslat)
+    print("\n")
+    print("voici les stopwords du grec")
+    print(stopwordsgr)
+    print("\n")

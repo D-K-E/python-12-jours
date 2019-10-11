@@ -1,0 +1,13 @@
+############
+Exercice 02
+############
+
+La structure de donnée qui nous permet de stocker une liste des clés uniques
+avec des valeurs associées s'appelle une :code:`dictionnaire` (dictionary).
+En python il peut être déclaré soit par la fonction :code:`dict`, soit par
+:code:`{}`. Construisez deux dictionnaires, l'un avec :code:`dict`, l'autre
+avec :code:`{}` qui contient les associations suivantes :code:`prenom -> Zoe`,
+:code:`nom -> Okru`, :code:`age -> 51`. 
+
+Veuillez consulter la section sur les `dictionnaires
+<https://docs.python.org/3.7/library/stdtypes.html#dict>`_ du manuel de python

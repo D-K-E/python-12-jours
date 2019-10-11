@@ -64,6 +64,7 @@ CONTROL = {"show": show_model_result, "view": VIEW, "model": MODEL}
 # fin de déclaration de contrôleur
 
 if __name__ == "__main__":
+    # point d'entrée du programme
     nb1str = input("Entrez le premier nombre: ")
     nb2str = input("Entrez le deuxième nombre: ")
     opstr = input("Entrez l'opérateur [+,-,/,*]: ")
@@ -74,3 +75,4 @@ if __name__ == "__main__":
     CONTROL["view"] = VIEW
     CONTROL["model"] = MODEL
     print(CONTROL["show"](CONTROL["view"], CONTROL["model"]))
+    # fin d'exécution

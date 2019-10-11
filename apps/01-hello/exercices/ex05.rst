@@ -1,0 +1,20 @@
+############
+Exercice 05
+############
+
+La structure de donnée qui nous permet de stocker une ensemble ordonné des
+données s'appelle une :code:`liste` en python. Il est déclaré à la fois par
+:code:`list` et à la fois par :code:`[]`. Dans la conception d'une liste on a
+besoin deux éléments très importants, une stratégie pour ajouter des membres à
+la liste, et une fonction qui nous permet de tirer les membres.
+Déclarez une liste vide et ajoutez les membres suivantes :code:`23, 456, 8,
+23, 1, 86, 44, 13`. Puis écrivez une fonction pour tirer les membres avec les
+critères suivantes:
+
+- Si le membre est moins de 15 prenez le carré et utilisez cela comme valeur
+  de comparaison avec des autres membres
+- Sinon utilisez la valeur normal.
+
+Veuillez consulter sur la `page
+<https://docs.python.org/3.5/library/stdtypes.html#lists>`_ concernant
+:code:`list` du manuel.

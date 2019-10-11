@@ -1,0 +1,22 @@
+############
+Exercice 03
+############
+
+La structure de donnée qui nous permet de stocker un texte s'appelle
+:code:`str` en Python, un chain de caractère. Quand on veut ajouter des
+chaines de caractère aux uns aux autres, il y a trois endroits qu'on peut
+utiliser. On peut soit ajouter à la fin de chaine soit au début de chaine,
+soit n'importe quelle endroit dans la chaine. On appelle cet opération
+concaténation. Vous avez deux chaines de caractère: :code:`une maison` et
+:code:`très petite`, veuillez concaténez la deuxième chaine de caractère:
+
+- au début
+
+- à la fin
+
+- et au milieu
+
+de la première chaine de caractère.
+
+Astuce: Veuillez consulter sur la page de :code:`format` et :code:`str` du
+`manuel <https://docs.python.org/3.7/library/stdtypes.html#string-methods>`_.
