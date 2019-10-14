@@ -7,7 +7,10 @@ Ayeva, Kamon, and Sakis Kasampalis. Mastering Python Design Patterns.
 Birmingham, 2018, 24 - 37.  """
 
 import math
+import os
+import json
 from lxml import etree
+import pdb
 
 
 class DocumentBuilder:
@@ -21,6 +24,7 @@ class DocumentBuilder:
                 data = fp.read()
                 lines = fp.readlines()
             self.data = data
+            self.ext = self.path.split(".").pop()
             self.brut_lines = lines
             self.nb_lines = None
             self.size = len(data)
@@ -34,8 +38,10 @@ class DocumentBuilder:
 
         def set_words(self):
             "Faire un split des mots du document"
-            strip_data = self.data.strip(self.stopchars)
+            strip_data = "".join([c for c in self.data if c not in
+                                  self.stopchars])
             self.words = strip_data.split(self.splitword)
+            self.words = [word.strip() for word in self.words]
             self.words = [word for word in self.words if word and word not in
                           self.stopwords]
 
@@ -61,21 +67,35 @@ class DocumentBuilder:
                 weights[word] = count / total_word_count
             self.word_weights = weights
 
+        def set_document_properties(self):
+            "Set document properties"
+            self.set_words()
+            self.set_terms()
+            self.set_word_counts()
+            self.set_word_weights()
+
+        def __str__(self):
+            return "Document at " + self.path
+
     class TeiDocument(Document):
         "Un document de type xml"
 
         def __init__(self, fpath: str):
             super().__init__(fpath)
-            self.tei = etree.fromstring(self.data)
+            self.parser = etree.XMLParser(remove_blank_text=True,
+                                          encoding="utf-8",
+                                          ns_clean=True, recover=True)
+            self.tei = etree.XML(bytes(bytearray(self.data, "utf-8")),
+                                 self.parser)
 
         def set_words(self):
             "Obtenir une liste de mot du document"
             self.words = [word.text for word in self.tei.iter(
-                "w") if "text" in word]
+                "w") if word.text]
             self.words = [word for word in self.words if word not in
                           self.stopwords]
 
-    def build_doc(self, filepath: str):
+    def choose_doc(self, filepath: str):
         "Construit le document en fonction d'extension de chemin"
         assert isinstance(filepath, str)
         if filepath.endswith('xml'):
@@ -84,6 +104,7 @@ class DocumentBuilder:
             self.doc = self.Document(filepath)
         else:
             raise ValueError("Unkown extension on filepath: " + filepath)
+        return self.doc
 
     def set_stop_chars(self, chars: str):
         "Place les caractères à filtrer au doc"
@@ -99,6 +120,14 @@ class DocumentBuilder:
         "Place le séparateur de mots"
         assert isinstance(char, str)
         self.doc.splitword = char
+
+    def build_doc(self, stop_chars: str, stop_words: str,
+                  word_split_char: str, filepath: str):
+        "Build document using given parameters"
+        self.choose_doc(filepath)
+        self.set_stop_chars(stop_chars)
+        self.set_stopwords(stop_words)
+        self.set_word_split(word_split_char)
 
 
 class DocumentCollection:
@@ -118,10 +147,10 @@ class DocumentCollection:
         "Obtient les termes de collection"
         terms = []
         for doc in self.collection.values():
-            words = set(doc.words)
-            for word in words:
-                terms.append(word)
-        self.terms = list(set(terms))
+            doc_terms = doc.terms
+            for term in doc_terms:
+                terms.append(term)
+        self.terms = set(terms)
 
     def set_term_frequency(self):
         "Obtient la fréquence de term pour la collection"
@@ -174,25 +203,94 @@ class DocumentCollection:
                     doc_term_frequency = 0
                 tf_idf_term = doc_term_frequency * idf
                 tf_idf_terms[term][index] = tf_idf_term
+        #
+        tf_idf_terms = self.sort_tf_idf_terms(tf_idf_terms)
         self.tf_idf_terms = tf_idf_terms
+
+    def sort_tf_idf_terms(self, tf_idf_terms: dict):
+        "sort tf idf frequencies"
+        for term, doc_index_tf_idf in tf_idf_terms.items():
+            tf_idf_terms[term] = None
+            doc_index_tf_idf = [
+                list(item) for item in doc_index_tf_idf.items()
+            ]
+            doc_index_tf_idf.sort(key=lambda x: x[1])
+            tf_idf_terms[term] = doc_index_tf_idf
+        return tf_idf_terms
+
+    def set_collection_properties(self):
+        "Collection properties"
+        self.set_terms()
+        self.set_term_frequency()
+        self.set_document_frequency()
+        self.set_inverse_document_frequency()
+        self.set_tf_idf_to_terms()
+
+    def change_doc_index_to_path(self) -> dict:
+        "change document index to document path"
+        tf_idf_terms = {}
+        for term, doc_index_tf_idf in self.tf_idf_terms.items():
+            tf_idf_terms[term] = []
+            for doc_index, tf_idf in doc_index_tf_idf:
+                doc = self.collection[doc_index]
+                doc_path = doc.path
+                tf_idf_terms[term].append([doc_path, tf_idf])
+        return tf_idf_terms
+
+    def save_tf_idf_terms(self, filepath: str):
+        "save tf idf dictionary to file path"
+        tf_idf_terms = self.change_doc_index_to_path()
+        with open(filepath, "w", encoding="utf-8", newline="\n") as fd:
+            json.dump(tf_idf_terms, fd, ensure_ascii=False, indent=4)
+
+
+def read_text(chemin: str, start_line=2):
+    "Read text"
+    with open(chemin, "r", encoding="utf-8", newline="\n") as fd:
+        txt = fd.readlines()
+        txt = txt[start_line:]
+        txt = [t.strip() for t in txt]
+    return txt
+
+
+def make_path(basepath: str, filenames: list):
+    "make path using base path"
+    return [os.path.join(basepath, filename) for filename in filenames]
 
 
 if __name__ == "__main__":
-    with open("stopchars.txt", "r", encoding="utf-8", newline="\n") as fd:
+    asset_path = "assets"
+    filenames = ["stopchars.txt", "stopwordsLat.txt",
+                 "stopwordsGr.txt", "greek-text.txt", "tei-latin.xml",
+                 "collection-tf-idf.json"]
+    paths = make_path(asset_path, filenames)
+    with open(paths[0], "r", encoding="utf-8", newline="\n") as fd:
         stopchars = fd.readlines()
-        stopchars = stopchars[2] # parce que les deux premiers lignes sont
+        stopchars = stopchars[2]  # parce que les deux premiers lignes sont
         # des references
     #
-    with open("stopwordsLat.txt", "r", encoding="utf-8", newline="\n") as fd:
-        stopwordslat = fd.readlines()
-        stopwordslat = stopwordslat[2:]
-
-    with open("stopwordsGr.txt", "r", encoding="utf-8", newline="\n") as fd:
-        stopwordsgr = fd.readlines()
-        stopwordsgr = stopwordsgr[2:]
-    print("voici les stopwords du latin")
-    print(stopwordslat)
-    print("\n")
-    print("voici les stopwords du grec")
-    print(stopwordsgr)
-    print("\n")
+    stopwords_latin = read_text(paths[1])
+    stopwords_grecque = read_text(paths[2])
+    #
+    text_doc_builder = DocumentBuilder()
+    text_doc_builder.build_doc(filepath=paths[3],
+                               stop_chars=stopchars,
+                               stop_words=stopwords_grecque,
+                               word_split_char=" ")
+    doc_grecque = text_doc_builder.doc
+    # greek text from
+    # http://data.perseus.org/citations/
+    # urn:cts:greekLit:tlg0560.tlg001.perseus-grc1:1
+    doc_grecque.set_document_properties()
+    #
+    xml_doc_builder = DocumentBuilder()
+    xml_doc_builder.build_doc(filepath=paths[4],
+                              stop_chars=stopchars,
+                              stop_words=stopwords_latin,
+                              word_split_char=" ")
+    doc_latin = xml_doc_builder.doc
+    doc_latin.set_document_properties()
+    collection = DocumentCollection(docs=[doc_grecque, doc_latin])
+    collection.set_collection_properties()
+    collection.save_tf_idf_terms(paths[5])
+    print("Application done")

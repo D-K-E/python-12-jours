@@ -1,0 +1,6 @@
+############
+Exercice 02
+############
+
+Écrivez un programme qui prends le saisi d'utilisateur et l'enregistre à
+fichier :code:`ex02.txt`. Voici le `lien <https://docs.python.org/3.7/tutorial/inputoutput.html#reading-and-writing-files>`_ relatif du manuel.

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI>
+  <teiHeader>
+    <publicationStmt>
+      <ref>http://data.perseus.org/citations/urn:cts:latinLit:phi1294.phi002.perseus-lat1:1.1</ref>
+    </publicationStmt>
+  </teiHeader>
+  <text>
+    <body>
+      <div1 type="book" n="1" org="uniform" sample="complete">
+        <div2 type="poem" n="1" org="uniform" sample="complete">
+          <head>I</head>
+          <p>
+            <lb rend="displayNum" n="1"/>
+            <w>Hic</w> <w>est</w> <w>quem</w>
+            <w>legis</w> <w>ille</w>, <w>quem</w>
+            <w>requiris</w>,
+            <lb rend="displayNum" n="2"/>
+            <w>Toto</w> <w>notus</w> <w>in</w>
+            <w>orbe</w> <w>Martialis</w>
+            <lb rend="displayNum" n="3"/>
+            <w>Argutis</w> <w>epigrammaton</w>
+            <w>libellis</w>:
+            <pb/>
+            <lb rend="displayNum" n="4"/>
+            <w>Cui</w>, <w>lector</w>
+            <w>studiose</w>, <w>quod</w> <w>dedisti</w>
+            <lb rend="displayNum" n="5" />
+            <w>Viventi</w> <w>decus</w> <w>atque</w> <w>sentienti</w>,
+            <lb rend="displayNum" n="6" /><w>Rari</w>
+            <w>post</w> <w>cineres</w> <w>habent</w>
+            <w>poetae</w>.
+          </p>
+        </div2>
+      </div1>
+    </body>
+  </text>
+</TEI>

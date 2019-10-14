@@ -1,0 +1,6 @@
+############
+Exercice 04
+############
+
+Écrivez un programme pour afficher des lignes pairs, donc ligne 0, 2, 4, 6,
+etc du fichier :code:`ex04.txt`

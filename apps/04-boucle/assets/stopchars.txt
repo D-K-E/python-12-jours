@@ -1,0 +1,3 @@
+# list fait par Aurélien Berra pris de https://github.com/aurelberra/stopwords
+# en 2019-10-10
+-;:!?¿.()[]{}§@*/&#%†^°+<>|$

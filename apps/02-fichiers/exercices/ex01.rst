@@ -1,0 +1,6 @@
+############
+Exercice 01
+############
+
+Écrivez un programme qui affiche le contenu du fichier :code:`ex01.txt`.
+Voici le `lien <https://docs.python.org/3.7/tutorial/inputoutput.html#reading-and-writing-files>`_ relatif du manuel.
