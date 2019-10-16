@@ -1,0 +1,20 @@
+###########
+Exercice 01
+###########
+
+Écrivez un programme pour tester si le saisit d'utilisateur est dans le texte
+suivant:
+
+.. code:: text
+
+    Muse, chante, et dis-nous la funeste colère
+    D'Achille, du héros dont Pelée est le père :
+    Aux Grecs elle causa des malheurs infinis,
+    Trancha de leurs guerriers les jours inaccomplis,
+    Et leurs corps, par milliers, privés de sépulture,
+    Des vautours et des chiens devinrent la pâture.
+    Ainsi s'accomplissait la volonté des Cieux,
+    Depuis qu'au camp des Grecs, un conflit malheureux
+    Vint diviser Achille et le chef de l'armée.
+
+

@@ -1,0 +1,6 @@
+############
+Exercice 03
+############
+
+Écrivez un programme pour afficher le contenu de fichier :code:`ex03.txt`
+jusque le mot saisi par l'utilisateur est trouvé.

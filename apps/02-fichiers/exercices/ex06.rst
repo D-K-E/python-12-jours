@@ -1,0 +1,11 @@
+############
+Exercice 06
+############
+
+Écrivez un programme pour télécharger l'image dans le lien suivant:
+:code:`http://www.w3schools.com/css/trolltunga.jpg`
+
+
+Astuce: Pour lire les contenus d'un url, voir le `page <https://docs.python.org/3.7/library/urllib.request.html#module-urllib.request>`_ d'urllib de manuel.
+
+Astuce: N'oubliez pas qu'il faut enregistrer l'image comme un fichier binaire.

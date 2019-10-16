@@ -1,0 +1,37 @@
+############
+Exercice 05
+############
+
+Écrivez un program qui correspond à cas d'usage suivant:
+
+Je suis quelqu'un qui aime bien de penser avec des mots clés. Je lance mon
+programme. Je saisis un délimiteur pour les mots clés que je vais entrer
+prochainement. Je saisis maintenant mes mots clés séparés par le délimiteur
+que je saisis. Puis le programme crée un fichier intitulé "ex05-mes-mots-clés.txt".
+Le mise en page de fichier est le suivant:
+
+
++=====================================+
+|          Mes Mots Clés              |
++=====================================+
+| Les mots clés séparé par un espace  |
++-------------------------------------+
+| Les mots clés séparé par délimiteur |
++-------------------------------------+
+| Les                                 |
++-------------------------------------+
+| mots                                |
++-------------------------------------+
+| clés                                |
++-------------------------------------+
+| séparé                              |
++-------------------------------------+
+| par                                 |
++-------------------------------------+
+| nouvelles                           |
++-------------------------------------+
+| lignes                              |
++-------------------------------------+
+
+Astuce: Pour séparer les mots avec votre délimiteur, veuillez consulter le
+`page <https://docs.python.org/3.7/library/stdtypes.html#str.split>`_ de :code:`str`.

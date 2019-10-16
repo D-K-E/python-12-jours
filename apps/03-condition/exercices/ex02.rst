@@ -1,0 +1,28 @@
+############
+Exercice 02
+############
+
+Vous avez une liste des étudiants avec leurs notes associés. Écrivez un
+programme pour voir si l'étudiant(e) passe, si oui avec quelle mention.
+
+Les mentions sont suivantes:
+
+- Bien: 14 - 15
+
+- Très Bien: 16 - 18
+
+- Admis: 10 - 13
+
+- Parfait: 19 - 20
+
+- Non Admis: 0 - 9
+
+.. code:: python
+
+    etudiants = {"etu15": 0, "etu242": 12, "etu3": 10, 
+                 "etu4135": 14, "etu345": 19, "etu61": 16, "etu887": 8}
+
+Astuce: Pour itérer sur les clés et les valeurs d'une dictionnaire, veuillez
+consulter le 
+`page <https://docs.python.org/3.7/library/stdtypes.html#dict.items>`_ 
+de manuel.
