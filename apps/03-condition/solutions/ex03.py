@@ -5,24 +5,35 @@ Solution to Exercice 03
 # License: see, LICENSE
 
 import os
+import sys
+
+
+def read_in_chunks(fpath: str, csize: int, mot_cherche: str):
+    "lire le fichier par partie"
+    with open(fpath, "r", encoding="utf-8", newline="\n") as fd:
+        continue_read = True
+        while continue_read:
+            part = fd.read(csize)
+            if not part:
+                continue_read = False
+                return False, None
+            if mot_cherche in part:
+                continue_read = False
+                return True, part
 
 
 if __name__ == "__main__":
     fpath = os.path.join("assets", "ex03.txt")
     mot = input("Entrez un mot: ").strip()
-    motsize = len(mot) + 3  # pour être sur d'inclure le mot 
-    continue_afficher = True
-    with open(fpath, "r", encoding="utf-8", newline="\n") as fd:
-        while continue_afficher is True:
-            partie = fd.read(motsize)
-            if not partie:
-                continue_afficher = False
-                print("--- Texte Fini -----")
-            elif mot in partie:
-                print("-------------------")
-                print(partie)
-                print("-------------------")
-                continue_afficher = False
-            else:
-                print(partie)
+    chunk_size = len(mot) * 2
+    for size in range(chunk_size):
+        isFound, partie = read_in_chunks(fpath, size, mot)
+        if isFound:
+            print("-------------------")
+            print(partie)
+            print("-------------------")
+            print("Mot trouvé!")
+            print("Done!")
+            sys.exit(0)
+    print("Mot pas trouvé!")
     print("Done!")
