@@ -20,9 +20,11 @@ class DocumentBuilder:
 
         def __init__(self, filepath: str):
             self.path = filepath
+            ###################################################
             with open(filepath, "r", encoding="utf-8") as fp:
-                data = fp.read()
-                lines = fp.readlines()
+                data = fp.read()  # lecture entier du contenu
+                lines = fp.readlines()  # lecture par ligne du contenu
+            ###################################################
             self.data = data
             self.ext = self.path.split(".").pop()
             self.brut_lines = lines
@@ -240,8 +242,12 @@ class DocumentCollection:
     def save_tf_idf_terms(self, filepath: str):
         "save tf idf dictionary to file path"
         tf_idf_terms = self.change_doc_index_to_path()
+        ################################################################
         with open(filepath, "w", encoding="utf-8", newline="\n") as fd:
             json.dump(tf_idf_terms, fd, ensure_ascii=False, indent=4)
+        ################################################################
+
+#####################################################
 
 
 def read_text(chemin: str, start_line=2):
@@ -251,6 +257,7 @@ def read_text(chemin: str, start_line=2):
         txt = txt[start_line:]
         txt = [t.strip() for t in txt]
     return txt
+#####################################################
 
 
 def make_path(basepath: str, filenames: list):
@@ -264,11 +271,13 @@ if __name__ == "__main__":
                  "stopwordsGr.txt", "greek-text.txt", "tei-latin.xml",
                  "collection-tf-idf.json"]
     paths = make_path(asset_path, filenames)
+    ################################################################
     with open(paths[0], "r", encoding="utf-8", newline="\n") as fd:
         stopchars = fd.readlines()
         stopchars = stopchars[2]  # parce que les deux premiers lignes sont
         # des references
     #
+    ################################################################
     stopwords_latin = read_text(paths[1])
     stopwords_grecque = read_text(paths[2])
     #
