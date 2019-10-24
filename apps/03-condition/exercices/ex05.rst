@@ -1,0 +1,9 @@
+############
+Exercice 05
+############
+
+Écrivez un programme pour imprimer les chiffres pairs de la liste suivante
+:code:`[1, 3, 1, 1, 6, 31, 5, 8, 20, 6, 9, 2, 3]`
+
+Astuce: L'opérateur :code:`%` nous donne le résidu lorsqu'on divise un nombre
+entier avec un autre nombre entier.

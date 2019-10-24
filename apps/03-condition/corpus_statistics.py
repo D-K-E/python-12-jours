@@ -38,12 +38,16 @@ class DocumentBuilder:
 
         def set_words(self):
             "Faire un split des mots du document"
+            ########################################################
             strip_data = "".join([c for c in self.data if c not in
                                   self.stopchars])
+            ########################################################
             self.words = strip_data.split(self.splitword)
             self.words = [word.strip() for word in self.words]
+            ##################################################################
             self.words = [word for word in self.words if word and word not in
                           self.stopwords]
+            ##################################################################
 
         def set_terms(self):
             "Place les termes pour document"
@@ -53,10 +57,12 @@ class DocumentBuilder:
             "Nettoyer les données et compter les mots"
             word_counts = {}
             for word in self.words:
+                ##############################
                 if word in word_counts:
                     word_counts[word] += 1
                 else:
                     word_counts[word] = 1
+                ##############################
             self.word_counts = word_counts
 
         def set_word_weights(self):
@@ -90,20 +96,25 @@ class DocumentBuilder:
 
         def set_words(self):
             "Obtenir une liste de mot du document"
+            ###########################################################
             self.words = [word.text for word in self.tei.iter(
                 "w") if word.text]
+            ###########################################################
             self.words = [word for word in self.words if word not in
                           self.stopwords]
+            ###########################################################
 
     def choose_doc(self, filepath: str):
         "Construit le document en fonction d'extension de chemin"
         assert isinstance(filepath, str)
+        ###################################################################
         if filepath.endswith('xml'):
             self.doc = self.TeiDocument(filepath)
         elif filepath.endswith("txt"):
             self.doc = self.Document(filepath)
         else:
             raise ValueError("Unkown extension on filepath: " + filepath)
+        ###################################################################
         return self.doc
 
     def set_stop_chars(self, chars: str):
@@ -158,9 +169,11 @@ class DocumentCollection:
         for term in self.terms:
             count = 0
             for doc in self.collection.values():
+                #######################################
                 if term in doc.terms:
                     doc_count = doc.word_counts[term]
                     count += doc_count
+                #######################################
             #
             term_counts[term] = count
         self.term_frequencies = term_counts
@@ -171,8 +184,10 @@ class DocumentCollection:
         for term in self.terms:
             count = 0
             for doc in self.collection.values():
+                ########################
                 if term in doc.terms:
                     count += 1
+                ########################
             doc_count[term] = count
         self.document_frequencies = doc_count
 
@@ -197,10 +212,12 @@ class DocumentCollection:
             tf_idf_terms[term] = {}
             idf = self.inverse_document_frequencies[term]
             for index, doc in self.collection.items():
+                ################################################
                 if term in doc.word_counts:
                     doc_term_frequency = doc.word_counts[term]
                 else:
                     doc_term_frequency = 0
+                ################################################
                 tf_idf_term = doc_term_frequency * idf
                 tf_idf_terms[term][index] = tf_idf_term
         #
@@ -258,7 +275,9 @@ def make_path(basepath: str, filenames: list):
     return [os.path.join(basepath, filename) for filename in filenames]
 
 
+####################################
 if __name__ == "__main__":
+    ################################
     asset_path = "assets"
     filenames = ["stopchars.txt", "stopwordsLat.txt",
                  "stopwordsGr.txt", "greek-text.txt", "tei-latin.xml",
