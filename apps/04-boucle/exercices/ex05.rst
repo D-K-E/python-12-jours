@@ -1,0 +1,68 @@
+###########
+Exercice 04
+###########
+
+Voici votre deuxième programme un peu plus sérieux que les autres:
+
+Dans le dossier :code:`solutions`, il y a un fichier, :code:`liens-json.txt`.
+Il contient des liens vers des fichiers :code:`json` en ligne. Le format
+:code:`json` ressemble beaucoup au dictionnaire de python. Pour lire ce format
+en python veuillez consulter le page `json
+<https://docs.python.org/3.7/library/json.html>`_.
+
+Écrivez un programme qui accomplie les taches suivantes:
+
+- Il lit le chemin de texte qui contient les liens vers des fichiers
+  :code:`json`
+
+- Pour chaque liens:
+
+  - On ouvre le lien
+
+  - On lit le texte au bout du lien.
+
+  - On le transforme à une dictionnaire de python.
+
+  - On prend la valeur du clé :code:`title`
+
+  - On prend la valeur du clé :code:`id`
+
+  - On prend la valeur du clé :code:`bbox`
+
+  - On prend la valeur du clé :code:`reprPoint`
+
+  - On prend la valeur du clé :code:`description`
+
+  - On crée une nouvelle dictionnaire avec les clés suivants:
+
+    - :code:`titre`
+
+    - :code:`zone`
+
+    - :code:`point`
+
+    - :code:`info`
+
+    - :code:`pleiadesId`
+
+  - On affecte la valeur de :code:`title` au :code:`titre`
+
+  - On affecte la valeur de :code:`bbox` au :code:`zone`
+
+  - On affecte la valeur de :code:`reprPoint` au :code:`point`
+
+  - On affecte la valeur de :code:`description` au :code:`info`
+
+  - On affecte la valeur de :code:`id` au :code:`pleiadesId`
+
+  - On transforme la dictionnaire au format :code:`json`
+
+  - On enregistre le :code:`json` vers un chemin.
+
+  - On ajoute le chemin au fichier :code:`mes-dictionnaires.txt`
+
+Astuce: On transforme un texte encodé en json vers une dictionnaire python
+avec le commande :code:`json.loads`, et on transforme une dictionnaire python
+à :code:`json` avec le commande :code:`json.dumps`
+
+

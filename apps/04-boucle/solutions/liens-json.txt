@@ -1,0 +1,5 @@
+https://pleiades.stoa.org/places/687947/json
+https://pleiades.stoa.org/places/579885/json
+https://pleiades.stoa.org/places/40125/json
+https://pleiades.stoa.org/places/825309/json
+https://pleiades.stoa.org/places/1001916/json

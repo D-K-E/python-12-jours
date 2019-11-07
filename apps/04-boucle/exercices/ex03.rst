@@ -1,0 +1,26 @@
+############
+Exercice 03
+############
+
+Écrivez un programme pour faire une rotation à gauche par le nombre de fois
+saisit par l'utilisateur. Votre liste a maintenant deux dimensions et il faut
+prendre la première colonne pour l'ajouter comme la dernière.
+Par exemple:
+
+.. code:: python
+
+    maliste = [[1,2,3],[2,6,8], [3,5,6]]
+    nb = 2
+    def fnc(maliste, nb) -> list: return maliste
+    # 1. itération
+    # [ [2, 3, 1],
+    #   [6, 8, 2],
+    #   [5, 6, 3] ]
+    #
+    # 2. itération
+    # [ [3, 1, 2],
+    #   [8, 2, 6],
+    #   [6, 3, 5] ]
+
+Votre liste pour le programme est :code:`[[1,2,3,4,5], [6,7,8,9,10],
+[11,12,13,14,15], [16,17,18,19,20], [21,22,23,24,25]]`

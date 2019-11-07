@@ -1,0 +1,6 @@
+
+solutions/json/pleiades-0.json
+solutions/json/pleiades-1.json
+solutions/json/pleiades-2.json
+solutions/json/pleiades-3.json
+solutions/json/pleiades-4.json

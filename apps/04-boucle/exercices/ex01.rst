@@ -1,0 +1,14 @@
+############
+Exercice 01
+############
+
+Ecrivez un programme pour faire une addition diagonale dans deux axes 
+pour la matrice suivante:
+
+.. code:: python
+
+    matrice = [[3, 6, 9],
+               [86, 123, 76],
+               [33, 56, 4]]
+
+Votre programme doit donc faire :code:`3 + 123 + 4 + 9 + 123 + 33`.

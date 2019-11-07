@@ -1,0 +1,13 @@
+###########
+Exercice 04
+###########
+
+Voici votre premier programme un peu plus sérieux que les autres:
+
+Dans le dossier :code:`solutions`, il y a un fichier, :code:`liens-image.txt`.
+Il contient des liens vers des images en ligne. Écrivez un programme qui prend
+le chemin vers ce fichier, télécharge les images qui se trouvent au bout des
+liens, enregistre les chemins de ces images à un fichier qui s'appelle
+:code:`mes-images.txt`.
+
+
