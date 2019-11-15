@@ -1,0 +1,6 @@
+############
+Exercice 01
+############
+
+Réécrivez la solution des exercices 01 et 02 de `02-fichiers` en suivant les
+principes de programmation orienté objet.

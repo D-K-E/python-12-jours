@@ -1,0 +1,6 @@
+############
+Exercice 02
+############
+
+Réécrivez la solution de l'exercice 02 de `03-condition` en suivant les
+principes de programmation orienté objet.

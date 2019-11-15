@@ -1,0 +1,6 @@
+############
+Exercice 03
+############
+
+Réécrivez la solution de l'exercice 04 de `04-boucle` en suivant les
+principes de programmation orienté objet.

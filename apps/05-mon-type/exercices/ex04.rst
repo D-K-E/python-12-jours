@@ -1,0 +1,6 @@
+############
+Exercice 04
+############
+
+Réécrivez le `hello_app.py` de `01-hello` en suivant les
+principes de programmation orienté objet.
