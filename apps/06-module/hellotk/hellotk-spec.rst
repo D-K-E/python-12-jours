@@ -12,7 +12,7 @@ d'affichage de texte. Le dessein de l'interface est comme le suivant:
 | b1   |  b2   | b3  |
 +------+-------+-----+
 
-Les :code`b1, b2, b3` sont des boutons qui permet d'afficher un texte sur le
+Les :code:`b1, b2, b3` sont des boutons qui permet d'afficher un texte sur le
 zone d'affichage qui est un label.
 
 - :code:`b1`: Lors qu'on clique sur :code:`b1`: on voit un message de
