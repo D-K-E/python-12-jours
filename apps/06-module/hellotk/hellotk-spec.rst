@@ -6,9 +6,9 @@ Specification de programme :code:`hellotk.py`
 d'affichage de texte. Le dessein de l'interface est comme le suivant:
 
 
-+====================+
++--------------------+
 | Zone d'affichage   |
-+======+=======+=====+
++------+-------+-----+
 | b1   |  b2   | b3  |
 +------+-------+-----+
 
