@@ -1,20 +1,20 @@
 #######################
-Python dans 12 jours
+Python dans 12 séances
 #######################
 
-Apprenez à programmer en Python dans 12 jours. 
+Apprenez à programmer en Python dans 12 séances. 
 
 Ceci est une introduction au python par des petits applications illustrant des
 points nécessaire pour être autonome avec la langue. Aucun prérequis est
 nécessaire à part d'une version de Python 3 et un éditeur de texte (notepad++,
-vim, emacs, atom, etc mais pas de word, open office). Il y a deux grandes
+vim, emacs, atom, vscode etc mais pas de word, open office). Il y a deux grandes
 parties, ou moments dans les cours: partie analytique et partie
 pratique/synthétique. Pour la première partie on découvre les parties d'une
 application au but éducatif, pour connaitre comment les composantes de Python
 sont utilisés pour faire une application propre. Dans la deuxième partie, on
 va écrire ensemble une application à l'interface graphique.
 Cette dernière regroupe toutes nos connaissances donc elle est une synthèse de
-ce qu'on a vu. Comme c'est une application complète toujours au but éducatif
+ce qu'on a vu. Comme c'est une application complète toujours au but pédagogique
 qui soit exemplaire pour les autres applications que vous pouvez écrire, son
 dépôt est séparé. Il se trouve `ici
 <https://github.com/D-K-E/python-12-jours-appli>`_.
