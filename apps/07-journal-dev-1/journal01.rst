@@ -3,7 +3,7 @@ Journal de Développement: 01
 #############################
 
 Auteur: Kaan Eraslan
-Date de Création: 
+Date de Création: 2019-12-04
 
 Ceci est la première entrée de notre journal de développement de notre
 application au but pédagogique.
@@ -30,13 +30,13 @@ Les termes qu'on utilise pour regrouper les changements qu'on a fait sont:
 Les dates qu'on utilise suivent le format d'ISO: 2019-11-30
 
 La gestion des versions de programme se fait en fonction de `SemVer standard
-<https://semver.org/>`_. En gros Maj.Min.Patch:
+<https://semver.org/>`_. En gros il comprend trois numéros: Maj.Min.Patch:
 
 - *Maj* introduit un changement incompatible avec la version ancienne, comme
   python 2 à python 3.
 
 - *Min* introduit un changement compatible avec la version ancienne qui ajoute
-  des nouvelles fonctionnalités
+  des nouvelles fonctionnalités comme Python 3.6
 
 - *Patch* introduit des fixes compatibles pour les bogues du programme.
 
@@ -67,9 +67,51 @@ Le mise en page de journal est le suivant:
 +----------------------------------------+----+---+---+---+
 | Sous titre: L'ancien numéro de version | Date de Commit |
 +----------------------------------------+----+---+---+---+
-|                                        |    |   |   |   |
 | Sous sous titre: Ajouté etc            |    |   |   |   |
 +----------------------------------------+----+---+---+---+
 
 
-Notez bien que les changements récents sont dans le tête du document
+Notez bien que les changements récents sont dans le tête du document et on
+garde toujours une section pour des changements qu'on prévoit mais qui ne sont
+pas encore implémenté.
+
+En pratique notre journal de développement correspond à ce qu'on appelle un
+:code:`CHANGELOG`.
+
+En bas vous allez voir la première version de notre Journal Dev.
+
+
+-------------
+
+
+======================
+Journal Développement
+======================
+
+Inédit
+=======
+
+- Boutons
+
+- Zone d'affichage des mots clés
+
+- Zone d'affichage des chemins
+
+- Zone d'affichage des chemins
+
+- Champs de saisi pour entrer les mots clés
+
+- Affichage et modification des textes
+
+- Filtrage des chemins
+
+
+[0.1.0] - 2019-12-04
+=====================
+
+Ajouté
+-------
+
+- Le cadre générale d'application
+
+- Zone d'affichage de texte
